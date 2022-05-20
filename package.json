@@ -1,0 +1,26 @@
+{
+  "name": "hibp-downloader",
+  "version": "1.0.0",
+  "description": "Download all the HIBP passwords",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcochard/hibp-downloader.git"
+  },
+  "keywords": [
+    "hibp"
+  ],
+  "author": "Greg Cochard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gcochard/hibp-downloader/issues"
+  },
+  "homepage": "https://github.com/gcochard/hibp-downloader#readme",
+  "dependencies": {
+    "got": "^11.8.3",
+    "yargs": "^17.5.1"
+  }
+}
