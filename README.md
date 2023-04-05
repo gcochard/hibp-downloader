@@ -7,13 +7,13 @@ CLI Usage:
 
 ```bash
 # output all hashes to stdout:
-node index.js download
+npx hibp-downloader download
 
 # output to a file:
-node index.js download -o hashes.txt
+npx hibp-downloader download -o hashes.txt
 
 # get a subset of hashes (start and end are inclusive):
-node index.js download -s 0x00010 -e 0x00011
+npx hibp-downloader download -s 0x00010 -e 0x00011
 ```
 
 Javascript module usage:
