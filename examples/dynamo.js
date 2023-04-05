@@ -79,7 +79,7 @@ function batchHashes(hashBuckets){
  * Fetches and inserts all hashes within the range
  * into the database.
  */
-async function insertSome({start=0, end=1, table='hibp-hashes', region='us-west-1'} = {}){
+async function insertSome({start=0, end=1, table='hibp-passwords', region='us-west-1'} = {}){
   console.log({start, end, table, region});
   const ddbClient = new DynamoDBClient({region});
   const someHashes = await getRange({start, end});
