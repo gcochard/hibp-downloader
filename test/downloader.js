@@ -19,7 +19,7 @@ describe('downloader', function(){
     it('should get more than one prefix', async function(){
       const resps = await getPrefixRange(['ABCDD', 'ABCDE'], {got: gotMock});
       assert.equal(resps.length, 2);
-      assert.equal(resps[0], mockResponse);
+      assert.equal(resps[0].hashes, mockResponse);
     });
   })
 });

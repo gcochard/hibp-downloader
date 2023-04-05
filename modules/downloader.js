@@ -7,7 +7,10 @@ async function getSinglePrefix(prefix, {got=defaultGot, basePath=defaultBasePath
 }
 
 async function getPrefixRange(range, {got=defaultGot, basePath=defaultBasePath} = {}){
-    return await Promise.all(range.map(v => getSinglePrefix(v, {got, basePath})));
+  return await Promise.all(range.map(async prefix => {
+    const hashes = await getSinglePrefix(prefix, {got, basePath});
+    return {prefix, hashes};
+  }));
 }
 
 module.exports = {getSinglePrefix, getPrefixRange};
