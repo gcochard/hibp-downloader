@@ -1,6 +1,5 @@
 const util = require('util');
-const { createRange } = require('../modules/range');
-const { getPrefixRange } = require('../modules/downloader');
+const { createRange, getPrefixRange } = require('hibp-downloader');
 const { DynamoDBClient, ListTablesCommand, BatchWriteItemCommand } = require('@aws-sdk/client-dynamodb');
 
 /**
