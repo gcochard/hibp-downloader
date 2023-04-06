@@ -83,13 +83,14 @@ async function insertSome({start=0, end=1, table='hibp-passwords', region='us-we
   const ddbClient = new DynamoDBClient({region});
   const someHashes = await getRange({start, end});
   const partitions = batchHashes(someHashes);
-  partitions.forEach(async partition => {
+  for(const partition of partitions){
     try {
       const response = await writeManyHashes(ddbClient, table, partition);
     } catch(e){
       console.error(e);
+      break;
     }
-  });
+  }
 }
 
 insertSome();
